@@ -1,0 +1,40 @@
+<nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-3">
+                <img src="/assets/logo.png" alt="PDCG Logo" class="w-10 h-10" />
+                <div class="flex flex-col">
+                    <span
+                        class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        PDCG
+                    </span>
+                    <span class="text-xs text-gray-400 hidden sm:block">
+                        Proxectos, Desenvolvemento E Código da Galiza
+                    </span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <button *ngFor="let item of menuItems" (click)="scrollToSection(item.section)"
+                    class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                    {{ item.label }}
+                </button>
+            </div>
+
+            <button class="md:hidden text-white" (click)="isOpen = !isOpen">
+                <i class="material-icons">
+                    {{ isOpen ? 'close' : 'menu' }}
+                </i>
+            </button>
+        </div>
+
+        <div *ngIf="isOpen" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-black/40 backdrop-blur-md rounded-lg mt-2">
+                <button *ngFor="let item of menuItems" (click)="scrollToSection(item.section)"
+                    class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium w-full text-left">
+                    {{ item.label }}
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
