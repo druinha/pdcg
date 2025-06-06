@@ -1,0 +1,107 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 50;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+      color: #ccc;
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .subtitle {
+        display: block;
+      }
+    }
+  }
+
+  .links {
+    display: none;
+
+    &.desktop {
+      @media (min-width: 768px) {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      button {
+        background: none;
+        border: none;
+        color: #ccc;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      text-align: left;
+      background: none;
+      border: none;
+      color: #ccc;
+      font-weight: 500;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
