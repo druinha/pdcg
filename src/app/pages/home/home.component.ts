@@ -7,4 +7,9 @@ import { HeroComponent } from '../../components/hero/hero.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  scrollToServices() {
+    const el = document.getElementById('services');
+    el?.scrollIntoView({ behavior: 'smooth' });
+  }
+}

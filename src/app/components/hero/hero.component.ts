@@ -6,9 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent {
-  scrollToServices() {
-    const el = document.getElementById('services');
-    el?.scrollIntoView({ behavior: 'smooth' });
-  }
-}
+export class HeroComponent {}
