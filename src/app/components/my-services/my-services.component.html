@@ -1,0 +1,74 @@
+<section id="services" class="py-20 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                App Development
+                <span class="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Specialized in hybrid mobile app development and modern web applications. From design to deployment, I
+                create cross-platform solutions that work everywhere.
+            </p>
+        </div>
+
+        <!-- Hybrid vs Native Explanation -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">
+                Why Choose
+                <span class="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Hybrid
+                    Apps</span>?
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-r from-blue-500 to-orange-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold">💰</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Cost Effective</h4>
+                    <p class="text-gray-300 text-sm">
+                        One codebase for multiple platforms reduces development time and costs by up to 60%
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-r from-orange-500 to-yellow-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold">⚡</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Faster Development</h4>
+                    <p class="text-gray-300 text-sm">
+                        Rapid deployment across iOS and Android with shared code and faster updates
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-r from-blue-500 to-cyan-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold">🔧</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Easy Maintenance</h4>
+                    <p class="text-gray-300 text-sm">
+                        Single codebase means easier updates, bug fixes, and feature additions
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let service of services"
+                class="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
+                <div class="inline-flex p-3 rounded-xl mb-6" [ngClass]="'bg-gradient-to-r ' + service.color">
+                    <div class="text-white text-2xl">
+                        {{ service.icon }}
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">{{ service.title }}</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">{{ service.description }}</p>
+                <ul class="space-y-2">
+                    <li *ngFor="let feature of service.features" class="flex items-center text-gray-400">
+                        <div class="w-2 h-2 rounded-full mr-3" [ngClass]="'bg-gradient-to-r ' + service.color"></div>
+                        {{ feature }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
