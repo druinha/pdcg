@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  lang: 'en' | 'es' | 'gl' = 'en';
+
   projects = [
     {
       title: 'SocialVibes App',
@@ -50,4 +53,37 @@ export class ProjectsComponent {
       code: '',
     },
   ];
+
+  translations = {
+    en: {
+      sectionTitle: 'Featured',
+      sectionHighlight: 'Projects',
+      sectionDescription:
+        "A showcase of real-world apps and websites I've developed for clients across tech, healthcare, and services.",
+      visitPage: 'Visit',
+      code: 'Code',
+    },
+    es: {
+      sectionTitle: 'Destacados',
+      sectionHighlight: 'Proyectos',
+      sectionDescription:
+        'Una muestra de aplicaciones y sitios web reales que he desarrollado para clientes en tecnología, salud y servicios.',
+      visitPage: 'Visitar',
+      code: 'Código',
+    },
+    gl: {
+      sectionTitle: 'Destacados',
+      sectionHighlight: 'Proxectos',
+      sectionDescription:
+        'Unha mostra de aplicacións e sitios web reais que desenvolvín para clientes en tecnoloxía, saúde e servizos.',
+      visitPage: 'Visitar',
+      code: 'Código',
+    },
+  };
+
+  constructor(private langService: LanguageService) {
+    this.langService.lang$.subscribe((l) => {
+      this.lang = l;
+    });
+  }
 }

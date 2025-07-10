@@ -2,12 +2,13 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                Featured
-                <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
+                {{ translations[lang].sectionTitle }}
+                <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                    {{ translations[lang].sectionHighlight }}
+                </span>
             </h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                A showcase of real-world apps and websites I've developed for clients across tech, healthcare, and
-                services.
+                {{ translations[lang].sectionDescription }}
             </p>
         </div>
 
@@ -44,7 +45,8 @@
                                 <path d="M14 3h7v7m0-7L10 14"></path>
                                 <path d="M5 12v7a2 2 0 0 0 2 2h7"></path>
                             </svg>
-                            <span class="text-sm font-medium">Visit {{ project.title }} page</span>
+                            <span class="text-sm font-medium">{{ translations[lang].visitPage }} {{ project.title }}
+                                page</span>
                         </a>
                         <a *ngIf="project.code" [href]="project.code" target="_blank"
                             class="flex items-center space-x-2 text-gray-400 hover:text-gray-300 transition-colors duration-200">
@@ -53,7 +55,7 @@
                                 <path d="M16 18l6-6-6-6"></path>
                                 <path d="M8 6l-6 6 6 6"></path>
                             </svg>
-                            <span class="text-sm font-medium">Code</span>
+                            <span class="text-sm font-medium">{{ translations[lang].code }}</span>
                         </a>
                     </div>
                 </div>
