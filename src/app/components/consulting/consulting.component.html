@@ -1,12 +1,21 @@
 <section id="consulting" class="py-20 text-white bg-indigo-900">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                {{ translations[lang].sectionTitle }}
-                <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                    {{ translations[lang].sectionHighlight }}
-                </span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
+                <ng-container *ngIf="lang === 'en'; else otherLangOrder">
+                    {{ translations[lang].sectionTitle }}
+                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                        {{ translations[lang].sectionHighlight }}
+                    </span>
+                </ng-container>
+                <ng-template #otherLangOrder>
+                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                        {{ translations[lang].sectionHighlight }}
+                    </span>
+                    {{ translations[lang].sectionTitle }}
+                </ng-template>
             </h2>
+
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                 {{ translations[lang].sectionDescription }}
             </p>
@@ -109,27 +118,21 @@
 
                 <a href="https://socialvibes.app" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
-                    <img src="assets/logos/socialvibes-logo.svg" alt="SocialVibes Logo"
+                    <img src="../../../assets/companiesLogos/socialvibesLogo.png" alt="SocialVibes Logo"
                         class="h-10 sm:h-12 object-contain" />
                     <span class="text-sm text-gray-300">{{ translations[lang].socialVibesName }}</span>
                 </a>
 
                 <a href="https://samadhispa.com" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
-                    <img src="assets/logos/samadhi-logo.svg" alt="Samadhi Spa Logo"
+                    <img src="../../../assets/companiesLogos/samadhispaLogo.png" alt="Samadhi Spa Logo"
                         class="h-10 sm:h-12 object-contain" />
                     <span class="text-sm text-gray-300">{{ translations[lang].samadhiName }}</span>
                 </a>
 
-                <a href="https://vidamassage.com" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex flex-col items-center space-y-2">
-                    <img src="assets/logos/vida-logo.svg" alt="Vida Massage Logo" class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">{{ translations[lang].vidaName }}</span>
-                </a>
-
                 <a href="https://dbsanantoniohotelmalta.com" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
-                    <img src="assets/logos/sanantonio-logo.svg" alt="DB San Antonio Hotel Logo"
+                    <img src="../../../assets/companiesLogos/dbhotelLogo.png" alt="DB San Antonio Hotel Logo"
                         class="h-10 sm:h-12 object-contain" />
                     <span class="text-sm text-gray-300">{{ translations[lang].sanAntonioName }}</span>
                 </a>

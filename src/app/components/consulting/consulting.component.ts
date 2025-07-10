@@ -77,7 +77,7 @@ export class ConsultingComponent {
       sanAntonioName: 'DB San Antonio Hotel',
     },
     es: {
-      sectionTitle: 'Consultoría',
+      sectionTitle: 'de Consultoría',
       sectionHighlight: 'Servicios',
       sectionDescription:
         'Experiencia para potenciar tu aplicación, mejorar el flujo de trabajo de tu negocio o estructurar el crecimiento de tu startup.',
@@ -127,7 +127,7 @@ export class ConsultingComponent {
       sanAntonioName: 'DB San Antonio Hotel',
     },
     gl: {
-      sectionTitle: 'Consultoría',
+      sectionTitle: 'de Consultoría',
       sectionHighlight: 'Servizos',
       sectionDescription:
         'Experiencia para potenciar a túa aplicación, mellorar o fluxo de traballo do teu negocio ou estruturar o crecemento da túa startup.',
