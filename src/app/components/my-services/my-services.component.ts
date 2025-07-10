@@ -165,7 +165,8 @@ export class MyServicesComponent {
           description:
             'Robust backend solutions with modern databases and cloud infrastructure for your mobile and web apps.',
           features: [
-            'MySQL & Neo4j',
+            'MySQL',
+            'Neo4j',
             'Firebase Integration',
             'Redis Caching',
             'RESTful APIs',
@@ -206,24 +207,24 @@ export class MyServicesComponent {
         highlight: 'Servicios',
       },
       description:
-        'Especializados en desarrollo de aplicaciones móviles híbridas y aplicaciones web modernas. Desde el diseño hasta el despliegue, creamos soluciones multiplataforma que funcionan en todas partes.',
+        'Especializados en desarrollo de aplicaciones móviles híbridas y aplicaciones web modernas. Desde el diseño hasta el lanzamiento, creamos soluciones multiplataforma que funcionan en todas partes.',
       whyChoose: 'Por qué elegir',
       whyChooseHighlight: 'Apps Híbridas',
       benefits: [
         {
           icon: '💰',
-          title: 'Rentable',
-          desc: 'Una base de código para múltiples plataformas reduce el tiempo y costos de desarrollo hasta en un 60%',
+          title: 'Económico',
+          desc: 'Una base de código única para múltiples plataformas reduce el tiempo y costos de desarrollo hasta en un 60%',
         },
         {
           icon: '⚡',
           title: 'Desarrollo Rápido',
-          desc: 'Despliegue rápido en iOS y Android con código compartido y actualizaciones más veloces',
+          desc: 'Lanzamiento rápido en iOS y Android con código compartido y actualizaciones más veloces',
         },
         {
           icon: '🔧',
           title: 'Mantenimiento Fácil',
-          desc: 'Una base de código única facilita actualizaciones, corrección de errores y añadidos de funcionalidades',
+          desc: 'Una base de código única facilita actualizaciones, corrección de errores y mejoras de funcionalidades',
         },
       ],
       services: [
@@ -236,7 +237,7 @@ export class MyServicesComponent {
             'iOS y Android',
             'Base de Código Única',
             'Rendimiento Nativo',
-            'Rentable',
+            'Económico',
           ],
           color: 'blue-orange',
         },
@@ -255,13 +256,13 @@ export class MyServicesComponent {
         },
         {
           icon: '⚡',
-          title: 'Diseño UI/UX y Prototipado',
+          title: 'Diseño UI/UX y Creación de Prototipos',
           description:
-            'Soluciones completas de diseño usando Figma para wireframes, prototipos y diseños de alta fidelidad antes del desarrollo.',
+            'Soluciones completas de diseño usando Figma para wireframes, creación de prototipos y diseños de alta fidelidad antes del desarrollo.',
           features: [
             'Diseños Figma',
             'Experiencia de Usuario',
-            'Prototipado',
+            'Creación de Prototipos',
             'Sistemas de Diseño',
           ],
           color: 'blue-cyan',
@@ -272,7 +273,8 @@ export class MyServicesComponent {
           description:
             'Soluciones robustas de backend con bases de datos modernas e infraestructura cloud para tus apps móviles y web.',
           features: [
-            'MySQL y Neo4j',
+            'MySQL',
+            'Neo4j',
             'Integración Firebase',
             'Cache Redis',
             'APIs RESTful',
@@ -296,7 +298,7 @@ export class MyServicesComponent {
           icon: '🌐',
           title: 'Desarrollo WordPress',
           description:
-            'Sitios web y soluciones e-commerce en WordPress económicos para clientes que necesitan soluciones rápidas y rentables.',
+            'Sitios web y soluciones e-commerce en WordPress económicos para clientes que necesitan soluciones rápidas y económicas.',
           features: [
             'Temas Personalizados',
             'WooCommerce',
@@ -313,24 +315,24 @@ export class MyServicesComponent {
         highlight: 'Servizos',
       },
       description:
-        'Especializados en desenvolvemento de aplicacións móbiles híbridas e aplicacións web modernas. Desde o deseño ata o despregue, creamos solucións multiplataforma que funcionan en todas partes.',
+        'Especializados en desenvolvemento de aplicacións móbiles híbridas e aplicacións web modernas. Dende o deseño ata o lanzamento, creamos solucións multiplataforma que funcionan en todas partes.',
       whyChoose: 'Por que escoller',
       whyChooseHighlight: 'Apps Híbridas',
       benefits: [
         {
           icon: '💰',
-          title: 'Rendible',
-          desc: 'Unha base de código para múltiples plataformas reduce o tempo e custo de desenvolvemento ata un 60%',
+          title: 'Económico',
+          desc: 'Unha base de código única para múltiples plataformas reduce o tempo e custo de desenvolvemento ata un 60%',
         },
         {
           icon: '⚡',
           title: 'Desenvolvemento Rápido',
-          desc: 'Desprego rápido en iOS e Android con código compartido e actualizacións máis rápidas',
+          desc: 'Lanzamento rápido en iOS e Android con código compartido e actualizacións máis rápidas',
         },
         {
           icon: '🔧',
           title: 'Mantemento Doado',
-          desc: 'Unha base de código única facilita actualizacións, corrección de erros e engadidos de funcionalidades',
+          desc: 'Unha base de código única facilita actualizacións, corrección de erros e implementación de funcionalidades',
         },
       ],
       services: [
@@ -362,13 +364,13 @@ export class MyServicesComponent {
         },
         {
           icon: '⚡',
-          title: 'Deseño UI/UX e Prototipado',
+          title: 'Deseño UI/UX e Creación de Prototipos',
           description:
-            'Solucións completas de deseño usando Figma para wireframes, prototipos e deseños de alta fidelidade antes do desenvolvemento.',
+            'Solucións completas de deseño usando Figma para wireframes, creación de prototipos e deseños de alta fidelidade antes do desenvolvemento.',
           features: [
             'Deseños Figma',
             'Experiencia de Usuario',
-            'Prototipado',
+            'Creación de Prototipos',
             'Sistemas de Deseño',
           ],
           color: 'blue-cyan',
@@ -379,7 +381,8 @@ export class MyServicesComponent {
           description:
             'Solucións robustas de backend con bases de datos modernas e infraestrutura cloud para as túas apps móbiles e web.',
           features: [
-            'MySQL e Neo4j',
+            'MySQL',
+            'Neo4j',
             'Integración Firebase',
             'Cache Redis',
             'APIs RESTful',

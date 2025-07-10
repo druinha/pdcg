@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   providedIn: 'root',
 })
 export class LanguageService {
-  private langSubject = new BehaviorSubject<'en' | 'es' | 'gl'>('en');
+  private langSubject = new BehaviorSubject<'en' | 'es' | 'gl'>('es');
   lang$ = this.langSubject.asObservable();
 
   setLang(lang: 'en' | 'es' | 'gl') {
