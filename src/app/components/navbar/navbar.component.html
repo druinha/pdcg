@@ -5,7 +5,14 @@
             <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="logo" />
             <div>
                 <div class="title">PDCG</div>
-                <div class="subtitle">Proxectos, Desenvolvemento E Código da Galiza</div>
+                <div class="subtitle">
+                    {{
+                    lang === 'en' ? 'Proxectos, Desenvolvemento E Código da Galiza' :
+                    (lang === 'es' ? 'Proxectos, Desenvolvemento E Código de Galiza' : 'Proxectos, Desenvolvemento e
+                    Código
+                    da Galiza')
+                    }}
+                </div>
             </div>
         </div>
 
@@ -18,7 +25,7 @@
             </ng-container>
         </div>
 
-        <!-- Language dropdown (moved outside brand) -->
+        <!-- Language dropdown -->
         <div class="lang-dropdown">
             <button class="lang-button" (click)="toggleLangMenu()">🌐 {{ lang.toUpperCase() }}</button>
             <div *ngIf="showLangMenu" class="lang-menu">

@@ -4,7 +4,6 @@ import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
-
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -15,11 +14,6 @@ export class NavbarComponent {
 
   isOpen = false;
   showLangMenu = false;
-
-  constructor(private langService: LanguageService) {
-    // this.lang = this.langService.currentLang;
-    // this.langService.lang$.subscribe((l) => (this.lang = l));
-  }
 
   navLabels = {
     en: [
@@ -51,15 +45,19 @@ export class NavbarComponent {
     ],
   };
 
-  switchLang(lang: 'en' | 'es' | 'gl') {
-    this.langService.setLang(lang);
-    this.showLangMenu = false; // close dropdown on select
+  constructor(private langService: LanguageService) {
+    this.langService.lang$.subscribe((l) => {
+      this.lang = l;
+      this.showLangMenu = false;
+      this.isOpen = false;
+    });
   }
 
   scrollToSection(sectionId: string) {
     const el = document.getElementById(sectionId);
     el?.scrollIntoView({ behavior: 'smooth' });
     this.isOpen = false;
+    this.showLangMenu = false;
   }
 
   getSectionId(label: string): string {
@@ -68,5 +66,13 @@ export class NavbarComponent {
 
   toggleLangMenu() {
     this.showLangMenu = !this.showLangMenu;
+  }
+
+  switchLang(newLang: 'en' | 'es' | 'gl') {
+    if (newLang !== this.lang) {
+      this.langService.setLang(newLang);
+      this.showLangMenu = false;
+      this.isOpen = false;
+    }
   }
 }
