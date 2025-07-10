@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
+
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -13,6 +15,11 @@ export class NavbarComponent {
 
   isOpen = false;
   showLangMenu = false;
+
+  constructor(private langService: LanguageService) {
+    // this.lang = this.langService.currentLang;
+    // this.langService.lang$.subscribe((l) => (this.lang = l));
+  }
 
   navLabels = {
     en: [
@@ -45,7 +52,8 @@ export class NavbarComponent {
   };
 
   switchLang(lang: 'en' | 'es' | 'gl') {
-    this.lang = lang;
+    this.langService.setLang(lang);
+    this.showLangMenu = false; // close dropdown on select
   }
 
   scrollToSection(sectionId: string) {
