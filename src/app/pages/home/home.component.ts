@@ -19,9 +19,4 @@ import { ConsultingComponent } from '../../components/consulting/consulting.comp
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  scrollToServices() {
-    const el = document.getElementById('services');
-    el?.scrollIntoView({ behavior: 'smooth' });
-  }
-}
+export class HomeComponent {}
