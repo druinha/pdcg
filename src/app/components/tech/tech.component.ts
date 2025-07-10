@@ -227,7 +227,7 @@ export class TechComponent {
           ],
         },
         {
-          category: 'Nube y Despliegue',
+          category: 'Cloud y Lanzamiento',
           color: 'from-blue-500 to-indigo-500',
           technologies: [
             'Google Cloud',
@@ -305,7 +305,7 @@ export class TechComponent {
           ],
         },
         {
-          category: 'Nube e Despregue',
+          category: 'Cloud e Lanzamento',
           color: 'from-blue-500 to-indigo-500',
           technologies: [
             'Google Cloud',
