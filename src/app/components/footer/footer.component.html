@@ -1,42 +1,39 @@
 <footer class="bg-gray-900 text-white px-6 py-12">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Company Info -->
-        <!-- Company Info -->
-        <!-- Company Info -->
         <div class="flex items-center space-x-3">
-            <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="h-10">
+            <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="h-10" />
             <div>
                 <h2 class="text-2xl font-bold text-blue-400">PDCG</h2>
-                <p class="text-sm">Proxectos, Desenvolvemento e Código da Galiza</p>
+                <p class="text-sm">{{ translations[lang].companyDescription }}</p>
             </div>
         </div>
 
-
-
         <!-- Contact Info -->
         <div>
-            <h3 class="text-lg font-semibold mb-2">Contact</h3>
+            <h3 class="text-lg font-semibold mb-2">{{ translations[lang].contactTitle }}</h3>
             <ul class="text-sm space-y-1">
                 <li><a href="tel:+34611398999" class="hover:underline">📞 611 398 999</a></li>
-                <li><a href="mailto:pdcg2025@gmail.com" class="hover:underline">📧 pdcg2025&#64;gmail.com</a></li>
-                <li>🏠 Arral Tanxil 6, 1A<br>15920 Rianxo, A Coruña</li>
+                <li>
+                    <a href="mailto:pdcg2025@gmail.com" class="hover:underline">📧 pdcg2025&#64;gmail.com</a>
+                </li>
+                <li>🏠 Arral Tanxil 6, 1A<br />15920 Rianxo, A Coruña</li>
             </ul>
         </div>
 
         <!-- Links -->
         <div>
-            <h3 class="text-lg font-semibold mb-2">Links</h3>
+            <h3 class="text-lg font-semibold mb-2">{{ translations[lang].linksTitle }}</h3>
             <ul class="text-sm space-y-1">
-                <li><a href="/careers" class="hover:underline">Careers</a></li>
-                <li><a href="/projects" class="hover:underline">Projects</a></li>
-                <li><a href="/privacy" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="/careers" class="hover:underline">{{ translations[lang].careers }}</a></li>
+                <li><a href="/projects" class="hover:underline">{{ translations[lang].projects }}</a></li>
+                <li><a href="/privacy" class="hover:underline">{{ translations[lang].privacyPolicy }}</a></li>
             </ul>
         </div>
 
         <!-- Newsletter / Social -->
         <div class="flex justify-end items-start">
             <div class="flex space-x-4">
-
                 <!-- LinkedIn -->
                 <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"
                     class="hover:text-blue-400 transition">
@@ -67,6 +64,6 @@
 
     <!-- Bottom -->
     <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm">
-        &copy; 2025 PDCG. All rights reserved.
+        &copy; 2025 PDCG. {{ translations[lang].allRightsReserved }}
     </div>
 </footer>
