@@ -17,7 +17,7 @@
         <h1 class="text-4xl sm:text-5xl font-extrabold">{{ texts[lang].title }}</h1>
 
         <!-- Subtitle -->
-        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto">{{ texts[lang].subtitle }}</p>
+        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto" [innerHTML]="texts[lang].subtitle"></p>
 
         <!-- Services Offered -->
         <div class="flex flex-wrap justify-center gap-3 mt-6">

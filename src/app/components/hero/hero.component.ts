@@ -15,7 +15,8 @@ export class HeroComponent {
     en: {
       title: 'Smart Digital Solutions for Modern Businesses',
       subtitle:
-        'We build fast, scalable websites and hybrid mobile apps — and offer expert consulting for your next digital project.',
+        'We build fast, scalable websites and hybrid mobile apps<br>' +
+        'and offer expert consulting for your next digital project.',
       services: [
         'Hybrid Mobile Apps',
         'Website Development',
@@ -26,7 +27,8 @@ export class HeroComponent {
     es: {
       title: 'Soluciones digitales inteligentes para negocios modernos',
       subtitle:
-        'Construimos sitios web rápidos y escalables y aplicaciones móviles híbridas — y ofrecemos consultoría experta para tu próximo proyecto digital.',
+        'Desarrollamos sitios web rápidos que crecen con tu negocio y aplicaciones móviles híbridas<br>' +
+        'además ofrecemos consultoría experta para tu próximo proyecto digital.',
       services: [
         'Apps móviles híbridas',
         'Desarrollo web',
@@ -37,7 +39,8 @@ export class HeroComponent {
     gl: {
       title: 'Solucións dixitais intelixentes para negocios modernos',
       subtitle:
-        'Creamos sitios web rápidos e escalables e aplicacións móbiles híbridas — e ofrecemos consultoría experta para o teu próximo proxecto dixital.',
+        'Creamos sitios web rápidos que medran co teu negocio e aplicacións móbiles híbridas<br>' +
+        'ademais ofrecemos consultoría experta para o teu próximo proxecto dixital.',
       services: [
         'Apps móbiles híbridas',
         'Desenvolvemento web',
