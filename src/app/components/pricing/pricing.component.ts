@@ -15,7 +15,7 @@ export class PricingComponent {
     en: {
       sectionTitle: 'Transparent Pricing',
       sectionDesc:
-        'Structured offerings for each type of service, adapted to your budget',
+        'Smart service options to match your project and your pocket',
 
       webTitle: '🌐 Web Development',
       webPlans: [
@@ -26,18 +26,17 @@ export class PricingComponent {
             {
               label: 'WordPress',
               price: '€400',
-              note: '+ €30/month maintenance',
+              note: '€30/month maintenance',
             },
             {
               label: 'Angular',
               price: '€600',
-              note: '+ €30/month maintenance',
+              note: '€30/month maintenance',
             },
           ],
           features: [
             'Contact form',
             'Integrated blog',
-            'Appointment system',
             'Payment button (+€150)',
           ],
           highlight: false,
@@ -49,12 +48,12 @@ export class PricingComponent {
             {
               label: 'WordPress',
               price: '€650',
-              note: '+ €50/month maintenance',
+              note: '€50/month maintenance',
             },
             {
               label: 'Angular',
               price: '€850',
-              note: '+ €50/month maintenance',
+              note: '€50/month maintenance',
             },
           ],
           features: [
@@ -73,12 +72,12 @@ export class PricingComponent {
             {
               label: 'WordPress',
               price: 'from €1,000',
-              note: '+ €100-300/month',
+              note: '€100-300/month',
             },
             {
               label: 'Angular',
               price: 'from €1,350',
-              note: '+ €100-300/month',
+              note: '€100-300/month',
             },
           ],
           features: [
@@ -158,46 +157,45 @@ export class PricingComponent {
     es: {
       sectionTitle: 'Precios Transparentes',
       sectionDesc:
-        'Ofertas estructuradas para cada tipo de servicio, adaptadas a tu presupuesto',
+        'Opciones de servicio inteligentes que se adaptan a tu proyecto y a tu presupuesto',
 
       webTitle: '🌐 Desarrollo Web',
       webPlans: [
         {
-          name: 'Sitio Simple',
+          name: 'Página Simple',
           subtitle: 'Página única con navegación fluida',
           prices: [
             {
               label: 'WordPress',
               price: '€400',
-              note: '+ €30/mes mantenimiento',
+              note: '€30/mes mantenimiento',
             },
             {
               label: 'Angular',
               price: '€600',
-              note: '+ €30/mes mantenimiento',
+              note: '€30/mes mantenimiento',
             },
           ],
           features: [
             'Formulario de contacto',
             'Blog integrado',
-            'Sistema de citas',
             'Botón de pago (+€150)',
           ],
           highlight: false,
         },
         {
-          name: 'Sitio Intermedio',
+          name: 'Página Intermedia',
           subtitle: 'Múltiples páginas con transiciones',
           prices: [
             {
               label: 'WordPress',
               price: '€650',
-              note: '+ €50/mes mantenimiento',
+              note: '€50/mes mantenimiento',
             },
             {
               label: 'Angular',
               price: '€850',
-              note: '+ €50/mes mantenimiento',
+              note: '€50/mes mantenimiento',
             },
           ],
           features: [
@@ -210,15 +208,15 @@ export class PricingComponent {
           highlightLabel: 'Más Popular',
         },
         {
-          name: 'Sitio Avanzado',
+          name: 'Página Avanzada',
           subtitle: 'Aplicación web completa',
           prices: [
             {
               label: 'WordPress',
               price: 'desde €1,000',
-              note: '+ €100-300/mes',
+              note: '€100-300/mes',
             },
-            { label: 'Angular', price: 'desde €1,350', note: '+ €100-300/mes' },
+            { label: 'Angular', price: 'desde €1,350', note: '€100-300/mes' },
           ],
           features: [
             'E-commerce completo',
@@ -302,12 +300,12 @@ export class PricingComponent {
     gl: {
       sectionTitle: 'Prezos Transparentes',
       sectionDesc:
-        'Ofertas estruturadas para cada tipo de servizo, adaptadas ao teu orzamento',
+        'Opcións de servizo intelixentes que se adaptan ao teu proxecto e ao teu presuposto',
 
       webTitle: '🌐 Desenvolvemento Web',
       webPlans: [
         {
-          name: 'Sitio Simple',
+          name: 'Páxina Sinxela',
           subtitle: 'Páxina única con navegación fluída',
           prices: [
             { label: 'WordPress', price: '€400', note: '+ €30/mes mantemento' },
@@ -316,13 +314,12 @@ export class PricingComponent {
           features: [
             'Formulario de contacto',
             'Blog integrado',
-            'Sistema de citas',
             'Botón de pago (+€150)',
           ],
           highlight: false,
         },
         {
-          name: 'Sitio Intermedio',
+          name: 'Páxina Intermedia',
           subtitle: 'Múltiples páxinas con transicións',
           prices: [
             { label: 'WordPress', price: '€650', note: '+ €50/mes mantemento' },
@@ -338,7 +335,7 @@ export class PricingComponent {
           highlightLabel: 'O máis popular',
         },
         {
-          name: 'Sitio Avanzado',
+          name: 'Páxina Avanzada',
           subtitle: 'Aplicación web completa',
           prices: [
             {
