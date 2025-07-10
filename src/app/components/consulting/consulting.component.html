@@ -2,11 +2,13 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Consulting <span
-                    class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+                {{ translations[lang].sectionTitle }}
+                <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                    {{ translations[lang].sectionHighlight }}
+                </span>
             </h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                Expertise to boost your app, improve your business workflow, or structure your startup’s growth.
+                {{ translations[lang].sectionDescription }}
             </p>
         </div>
 
@@ -16,17 +18,16 @@
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-white/20 transition-all duration-300 shadow-sm hover:shadow-lg">
                 <h3
                     class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-4">
-                    Tech & App Consulting
+                    {{ translations[lang].techConsultingTitle }}
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                    For tech companies, developers, and product teams who want better performance, structure, and code
-                    quality.
+                    {{ translations[lang].techConsultingDescription }}
                 </p>
                 <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
-                    <li>Code audits & architecture advice</li>
-                    <li>Performance & UX improvements</li>
-                    <li>Deployment & scalability consulting</li>
-                    <li>API/backend optimization</li>
+                    <li>{{ translations[lang].techConsultingFeatures[0] }}</li>
+                    <li>{{ translations[lang].techConsultingFeatures[1] }}</li>
+                    <li>{{ translations[lang].techConsultingFeatures[2] }}</li>
+                    <li>{{ translations[lang].techConsultingFeatures[3] }}</li>
                 </ul>
             </div>
 
@@ -35,17 +36,16 @@
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-white/20 transition-all duration-300 shadow-sm hover:shadow-lg">
                 <h3
                     class="text-xl font-bold bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent mb-4">
-                    Business Workflow Consulting
+                    {{ translations[lang].businessConsultingTitle }}
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                    For local businesses like cleaning services, spas, or hotels looking to optimize their daily
-                    operations.
+                    {{ translations[lang].businessConsultingDescription }}
                 </p>
                 <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
-                    <li>Shift planning & scheduling</li>
-                    <li>Expense control & cost cutting</li>
-                    <li>Digital tools & automations</li>
-                    <li>Process improvement</li>
+                    <li>{{ translations[lang].businessConsultingFeatures[0] }}</li>
+                    <li>{{ translations[lang].businessConsultingFeatures[1] }}</li>
+                    <li>{{ translations[lang].businessConsultingFeatures[2] }}</li>
+                    <li>{{ translations[lang].businessConsultingFeatures[3] }}</li>
                 </ul>
             </div>
 
@@ -54,30 +54,31 @@
                 class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-white/20 transition-all duration-300 shadow-sm hover:shadow-lg">
                 <h3
                     class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4">
-                    Product Planning & Agile Coaching
+                    {{ translations[lang].productPlanningTitle }}
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                    Ideal for startups or internal teams that need better structure, prioritization, and agile
-                    methodology.
+                    {{ translations[lang].productPlanningDescription }}
                 </p>
                 <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
-                    <li>Roadmap & MVP definition</li>
-                    <li>Agile & Scrum training</li>
-                    <li>Team workflow optimization</li>
-                    <li>Prioritization frameworks</li>
+                    <li>{{ translations[lang].productPlanningFeatures[0] }}</li>
+                    <li>{{ translations[lang].productPlanningFeatures[1] }}</li>
+                    <li>{{ translations[lang].productPlanningFeatures[2] }}</li>
+                    <li>{{ translations[lang].productPlanningFeatures[3] }}</li>
                 </ul>
             </div>
         </div>
 
         <div class="text-center mt-16">
             <div class="inline-block bg-white/5 border border-white/10 rounded-xl px-8 py-6 backdrop-blur-sm">
-                <h3 class="text-xl font-bold text-white mb-2">Interested in any of these services?</h3>
+                <h3 class="text-xl font-bold text-white mb-2">
+                    {{ translations[lang].contactTitle }}
+                </h3>
                 <p class="text-gray-300 text-sm mb-4 max-w-xs mx-auto">
-                    Contact us to discuss your needs and receive a personalized proposal.
+                    {{ translations[lang].contactDescription }}
                 </p>
                 <button
                     class="bg-gradient-to-r from-blue-500 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300">
-                    Request Consulting
+                    {{ translations[lang].contactButton }}
                 </button>
             </div>
         </div>
@@ -86,7 +87,7 @@
     <!-- Trusted By Section -->
     <div class="mt-20 bg-indigo-900 rounded-xl py-10 px-6 max-w-6xl mx-auto overflow-hidden">
         <h3 class="text-center text-lg text-gray-300 uppercase tracking-wide mb-8">
-            Companies Who Trusted Us
+            {{ translations[lang].trustedBy }}
         </h3>
 
         <div class="relative">
@@ -96,41 +97,41 @@
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="../../../assets/companiesLogos/niquita-logo.png" alt="Niquita Rengøring Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">Niquita Rengøring</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].niquitaName }}</span>
                 </a>
 
                 <a href="https://happyfeetrengoring.dk" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="../../../assets/companiesLogos/happyFeet-logo.png" alt="Happy Feet Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">Happy Feet Rengøring</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].happyFeetName }}</span>
                 </a>
 
                 <a href="https://socialvibes.app" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="assets/logos/socialvibes-logo.svg" alt="SocialVibes Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">SocialVibes</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].socialVibesName }}</span>
                 </a>
 
                 <a href="https://samadhispa.com" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="assets/logos/samadhi-logo.svg" alt="Samadhi Spa Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">Samadhi Spa</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].samadhiName }}</span>
                 </a>
 
                 <a href="https://vidamassage.com" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="assets/logos/vida-logo.svg" alt="Vida Massage Logo" class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">Vida Massage</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].vidaName }}</span>
                 </a>
 
                 <a href="https://dbsanantoniohotelmalta.com" target="_blank" rel="noopener noreferrer"
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="assets/logos/sanantonio-logo.svg" alt="DB San Antonio Hotel Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">DB San Antonio Hotel</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].sanAntonioName }}</span>
                 </a>
 
                 <!-- Repeat logos for seamless loop -->
@@ -138,11 +139,9 @@
                     class="inline-flex flex-col items-center space-y-2">
                     <img src="../../../assets/companiesLogos/niquita-logo.png" alt="Niquita Rengøring Logo"
                         class="h-10 sm:h-12 object-contain" />
-                    <span class="text-sm text-gray-300">Niquita Rengøring</span>
+                    <span class="text-sm text-gray-300">{{ translations[lang].niquitaName }}</span>
                 </a>
-                <!-- add more repeats as needed -->
             </div>
         </div>
     </div>
-
 </section>
