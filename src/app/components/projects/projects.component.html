@@ -2,11 +2,20 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                {{ translations[lang].sectionTitle }}
-                <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                    {{ translations[lang].sectionHighlight }}
-                </span>
+                <ng-container *ngIf="lang === 'en'; else otherLang">
+                    {{ translations[lang].sectionTitle }}
+                    <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                        {{ translations[lang].sectionHighlight }}
+                    </span>
+                </ng-container>
+                <ng-template #otherLang>
+                    <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                        {{ translations[lang].sectionHighlight }}
+                    </span>
+                    {{ translations[lang].sectionTitle }}
+                </ng-template>
             </h2>
+
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                 {{ translations[lang].sectionDescription }}
             </p>

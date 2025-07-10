@@ -67,7 +67,7 @@ export class ProjectsComponent {
       sectionTitle: 'Destacados',
       sectionHighlight: 'Proyectos',
       sectionDescription:
-        'Una muestra de aplicaciones y sitios web reales que he desarrollado para clientes en tecnología, salud y servicios.',
+        'Una muestra de aplicaciones y sitios web reales que hemos desarrollado para clientes en tecnología, salud y servicios.',
       visitPage: 'Visitar',
       code: 'Código',
     },
@@ -75,7 +75,7 @@ export class ProjectsComponent {
       sectionTitle: 'Destacados',
       sectionHighlight: 'Proxectos',
       sectionDescription:
-        'Unha mostra de aplicacións e sitios web reais que desenvolvín para clientes en tecnoloxía, saúde e servizos.',
+        'Unha mostra de aplicacións e sitios web reais que desenvolvemos para clientes en tecnoloxía, saúde e servizos.',
       visitPage: 'Visitar',
       code: 'Código',
     },
