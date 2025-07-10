@@ -1,5 +1,6 @@
 <nav class="navbar">
     <div class="container">
+        <!-- Brand -->
         <div class="brand">
             <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="logo" />
             <div>
@@ -8,23 +9,43 @@
             </div>
         </div>
 
+        <!-- Desktop links -->
         <div class="links desktop">
-            <button
-                *ngFor="let item of ['Home', 'Services', 'Tech Stack', 'Pricing', 'Projects', 'Consulting', 'Contact']"
-                (click)="scrollToSection(item.toLowerCase().replace(' ', '-'))">
-                {{ item }}
-            </button>
+            <ng-container *ngIf="navLabels[lang] as labels">
+                <button *ngFor="let item of labels" (click)="scrollToSection(getSectionId(item))">
+                    {{ item }}
+                </button>
+            </ng-container>
         </div>
 
+        <!-- Language dropdown (moved outside brand) -->
+        <div class="lang-dropdown">
+            <button class="lang-button" (click)="toggleLangMenu()">🌐 {{ lang.toUpperCase() }}</button>
+            <div *ngIf="showLangMenu" class="lang-menu">
+                <button *ngFor="let l of langs" [disabled]="l === lang" (click)="switchLang(l)">
+                    {{ l.toUpperCase() }}
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu toggle -->
         <button class="mobile-toggle" (click)="isOpen = !isOpen">
             {{ isOpen ? '✖' : '☰' }}
         </button>
     </div>
 
+    <!-- Mobile menu content -->
     <div *ngIf="isOpen" class="mobile-menu">
-        <button *ngFor="let item of ['Home', 'Services', 'Tech Stack', 'Pricing', 'Projects', 'Consulting', 'Contact']"
-            (click)="scrollToSection(item.toLowerCase().replace(' ', '-'))">
-            {{ item }}
-        </button>
+        <div class="mb-4 flex flex-col items-center gap-2">
+            <button *ngFor="let l of langs" [class.active]="lang === l" (click)="switchLang(l)">
+                {{ l.toUpperCase() }}
+            </button>
+        </div>
+
+        <ng-container *ngIf="navLabels[lang] as labels">
+            <button *ngFor="let item of labels" (click)="scrollToSection(getSectionId(item))">
+                {{ item }}
+            </button>
+        </ng-container>
     </div>
 </nav>
