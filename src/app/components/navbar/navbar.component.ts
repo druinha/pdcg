@@ -15,6 +15,31 @@ export class NavbarComponent {
   isOpen = false;
   showLangMenu = false;
 
+  labelToIdMap: { [key: string]: string } = {
+    Home: 'home',
+    Services: 'services',
+    'Tech Stack': 'tech-stack',
+    Pricing: 'pricing',
+    Projects: 'projects',
+    Consulting: 'consulting',
+    Contact: 'contact',
+
+    // Spanish
+    Inicio: 'home',
+    Servicios: 'services',
+    Tecnologías: 'tech-stack',
+    Precios: 'pricing',
+    Proyectos: 'projects',
+    Consultoría: 'consulting',
+    Contacto: 'contact',
+
+    // Galician
+    Servizos: 'services',
+    Tecnoloxías: 'tech-stack',
+    Prezos: 'pricing',
+    Proxectos: 'projects',
+  };
+
   navLabels = {
     en: [
       'Home',
@@ -61,7 +86,7 @@ export class NavbarComponent {
   }
 
   getSectionId(label: string): string {
-    return label.toLowerCase().replace(/\s+/g, '-');
+    return this.labelToIdMap[label] || label.toLowerCase().replace(/\s+/g, '-');
   }
 
   toggleLangMenu() {
