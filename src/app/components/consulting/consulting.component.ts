@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consulting',
@@ -178,9 +179,14 @@ export class ConsultingComponent {
     },
   };
 
-  constructor(private langService: LanguageService) {
+  constructor(private langService: LanguageService, private router: Router) {
     this.langService.lang$.subscribe((l) => {
       this.lang = l;
     });
+  }
+
+  goToConsulting() {
+    console.log('Navigating to consulting contact form');
+    this.router.navigate(['/contact-consulting']);
   }
 }

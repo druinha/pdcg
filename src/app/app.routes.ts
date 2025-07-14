@@ -14,6 +14,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'contact-consulting',
+    loadComponent: () =>
+      import(
+        './components/contact-consulting/contact-consulting.component'
+      ).then((m) => m.ContactConsultingComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
