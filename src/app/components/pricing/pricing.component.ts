@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pricing',
@@ -425,9 +426,14 @@ export class PricingComponent {
     },
   };
 
-  constructor(private langService: LanguageService) {
+  constructor(private langService: LanguageService, private router: Router) {
     this.langService.lang$.subscribe((l) => {
       this.lang = l;
     });
+  }
+
+  goAppWebForm() {
+    console.log('Navigating to web app contact form');
+    this.router.navigate(['/contact-webapp']);
   }
 }
