@@ -6,6 +6,7 @@ import { TechComponent } from '../../components/tech/tech.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
 import { ConsultingComponent } from '../../components/consulting/consulting.component';
 import { ContactComponent } from '../../components/contact/contact.component';
+import { SolutionsComponent } from '../../components/solutions/solutions.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { ContactComponent } from '../../components/contact/contact.component';
     ProjectsComponent,
     ConsultingComponent,
     ContactComponent,
+    SolutionsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
