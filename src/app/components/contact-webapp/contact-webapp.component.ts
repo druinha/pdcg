@@ -9,6 +9,17 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import emailjs from '@emailjs/browser';
 
+type ProjectType = 'web' | 'app' | 'both';
+
+interface DevFormData {
+  name: string;
+  email: string;
+  type: ProjectType;
+  budget?: string;
+  timeline?: string;
+  message: string;
+}
+
 @Component({
   selector: 'app-contact-webapp',
   imports: [CommonModule, ReactiveFormsModule],
@@ -108,9 +119,32 @@ export class ContactWebappComponent {
 
   onSubmit() {
     if (this.devForm.valid) {
-      const formData = this.devForm.value;
-      console.log('Send this data to API or email service:', formData);
-      // You can integrate EmailJS, Formspree, or your API here
+      const formData = this.devForm.value as DevFormData;
+
+      emailjs
+        .send(
+          'U5iw7AFZNS4j7Q1dD', // ✅ Replace with your actual Service ID
+          'template_bjiuru9', // ✅ Replace with your actual Template ID
+          {
+            name: formData.name,
+            email: formData.email,
+            type: this.translations[this.lang].contactForm.projectTypeOptions[
+              formData.type
+            ],
+            budget: formData.budget || 'Not specified',
+            timeline: formData.timeline || 'Not specified',
+            message: formData.message,
+          },
+          'U5iw7AFZNS4j7Q1dD' // ✅ Replace with your EmailJS User ID (Public Key)
+        )
+        .then(() => {
+          alert('Your message has been sent! We will contact you shortly.');
+          this.devForm.reset(); // ✅ Clear form after successful send
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          alert('Oops! Something went wrong. Please try again later.');
+        });
     }
   }
 }
