@@ -17,10 +17,8 @@
             </h3>
             <div class="grid md:grid-cols-3 gap-8">
                 <ng-container *ngFor="let plan of translations[lang].webPlans">
-                    <div [ngClass]="{
-                'relative border-2 border-cyan-400 bg-cyan-950/50 backdrop-blur-sm rounded-lg p-6 flex flex-col': plan.highlight,
-                'border border-teal-600 bg-teal-950/50 backdrop-blur-sm rounded-lg p-6 flex flex-col': !plan.highlight
-              }">
+                    <div class="relative p-6 flex flex-col backdrop-blur-sm"
+                        [ngClass]="plan.highlight ? 'border-2 border-cyan-400 bg-cyan-950/50 rounded-3xl' : 'border border-teal-600 bg-teal-950/50 rounded-3xl'">
                         <div *ngIf="plan.highlight"
                             class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-cyan-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                             {{ plan.highlightLabel }}
@@ -73,11 +71,10 @@
             </h3>
             <div class="grid md:grid-cols-3 gap-8">
                 <ng-container *ngFor="let plan of translations[lang].appPlans">
-                    <div [ngClass]="{
-                                  'relative border-2 border-yellow-400 bg-yellow-950/30 backdrop-blur-sm rounded-lg p-6 flex flex-col':
-                                    plan.highlight,
-                                  'border border-cyan-600 bg-cyan-950/50 backdrop-blur-sm rounded-lg p-6 flex flex-col': !plan.highlight
-                                }">
+                    <div class="relative p-6 flex flex-col backdrop-blur-sm" [ngClass]="plan.highlight
+                  ? 'border-2 border-yellow-400 bg-yellow-950/30 rounded-3xl'
+                  : 'border border-cyan-600 bg-cyan-950/50 rounded-3xl'">
+
                         <div *ngIf="plan.highlight"
                             class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-cyan-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                             {{ plan.highlightLabel }}
