@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-webapp',
