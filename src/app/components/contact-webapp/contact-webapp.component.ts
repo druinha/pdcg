@@ -123,8 +123,8 @@ export class ContactWebappComponent {
 
       emailjs
         .send(
-          'U5iw7AFZNS4j7Q1dD', // ✅ Replace with your actual Service ID
-          'template_bjiuru9', // ✅ Replace with your actual Template ID
+          'service_0hwujn8', // ✅ Replace with your actual Service ID
+          'template_773tnit', // ✅ Replace with your actual Template ID
           {
             name: formData.name,
             email: formData.email,
