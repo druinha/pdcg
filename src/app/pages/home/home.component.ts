@@ -8,6 +8,7 @@ import { ConsultingComponent } from '../../components/consulting/consulting.comp
 import { ContactComponent } from '../../components/contact/contact.component';
 import { SolutionsComponent } from '../../components/solutions/solutions.component';
 import { EnviromentalComponent } from '../../components/enviromental/enviromental.component';
+import { WhyUsComponent } from '../../components/why-us/why-us.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import { EnviromentalComponent } from '../../components/enviromental/enviromenta
     ContactComponent,
     SolutionsComponent,
     EnviromentalComponent,
+    WhyUsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
