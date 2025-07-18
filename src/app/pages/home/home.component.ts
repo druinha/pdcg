@@ -7,6 +7,7 @@ import { ProjectsComponent } from '../../components/projects/projects.component'
 import { ConsultingComponent } from '../../components/consulting/consulting.component';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { SolutionsComponent } from '../../components/solutions/solutions.component';
+import { EnviromentalComponent } from '../../components/enviromental/enviromental.component';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ import { SolutionsComponent } from '../../components/solutions/solutions.compone
     ConsultingComponent,
     ContactComponent,
     SolutionsComponent,
+    EnviromentalComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -1,0 +1,38 @@
+<section id="environment" class="py-20 text-white bg-indigo-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                <ng-container *ngIf="lang === 'en'; else otherLangEnv">
+                    {{ translations.title[lang] }}
+                    <span class="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+                        {{ translations.highlight[lang] }}
+                    </span>
+                </ng-container>
+                <ng-template #otherLangEnv>
+                    <span class="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+                        {{ translations.highlight[lang] }}
+                    </span>
+                    {{ translations.title[lang] }}
+                </ng-template>
+            </h2>
+
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                {{ translations.description[lang] }}
+            </p>
+        </div>
+
+        <!-- Environmental Measures List -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <ul class="space-y-6">
+                <li *ngFor="let measure of translations.measures[lang]" class="flex items-start gap-4">
+                    <div class="w-3 h-3 mt-2 rounded-full bg-gradient-to-r from-green-400 to-teal-400"></div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-1">{{ measure.title }}</h4>
+                        <p class="text-gray-300 text-sm">{{ measure.desc }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
