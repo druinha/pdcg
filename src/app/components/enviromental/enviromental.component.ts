@@ -49,49 +49,85 @@ export class EnviromentalComponent {
           title: 'Sustainable Remote Model',
           desc: 'We support a sustainable business model that promotes responsible tech practices and minimizes our ecological footprint.',
         },
+        {
+          title: 'Green Web & App Development',
+          desc: 'We build efficient websites and applications that reduce data load and server energy consumption.',
+        },
+        {
+          title: 'Eco-Friendly Hosting Providers',
+          desc: 'We use hosting providers and data centers powered by renewable energy and optimized for low energy use.',
+        },
+        {
+          title: 'Device Recycling & Responsible Procurement',
+          desc: 'We extend device lifespan and recycle electronics responsibly while choosing partners aligned with sustainability.',
+        },
       ],
       es: [
         {
-          title: 'Reducción de la huella de carbono',
-          desc: 'Al trabajar de forma remota evitamos emisiones derivadas del transporte y de infraestructuras físicas.',
+          title: 'Huella de Carbono Reducida',
+          desc: 'Al trabajar de forma remota, evitamos emisiones por desplazamientos y oficinas físicas.',
         },
         {
-          title: 'Uso eficiente de la energía',
-          desc: 'Utilizamos dispositivos energéticamente eficientes y optimizamos el consumo eléctrico en todas nuestras operaciones.',
+          title: 'Uso Eficiente de Energía',
+          desc: 'Usamos dispositivos eficientes y optimizamos el consumo eléctrico en todas las operaciones.',
         },
         {
-          title: 'Modelo sin papel',
-          desc: 'Toda la documentación y los procesos de trabajo se gestionan digitalmente, reduciendo el uso innecesario de papel.',
+          title: 'Modelo Sin Papel',
+          desc: 'Todos los procesos y documentación son digitales, reduciendo el uso innecesario de papel.',
         },
         {
-          title: 'Almacenamiento en la nube sostenible',
-          desc: 'Usamos servicios en la nube de proveedores que aplican políticas energéticas sostenibles y recurren a fuentes renovables.',
+          title: 'Almacenamiento en la Nube Verde',
+          desc: 'Confiamos en proveedores cloud que aplican políticas eficientes y energías renovables.',
         },
         {
-          title: 'Modelo remoto sostenible',
-          desc: 'Apoyamos un modelo empresarial sostenible que promueve un uso responsable de la tecnología y minimiza el impacto ecológico.',
+          title: 'Modelo Remoto Sostenible',
+          desc: 'Apoyamos un modelo de negocio responsable que minimiza nuestro impacto ambiental.',
+        },
+        {
+          title: 'Desarrollo Web y App Ecológico',
+          desc: 'Creamos sitios y apps optimizados que reducen la carga de datos y el consumo energético.',
+        },
+        {
+          title: 'Proveedores de Hosting Sostenible',
+          desc: 'Utilizamos servidores con energía renovable y centros de datos de bajo consumo.',
+        },
+        {
+          title: 'Reciclaje y Compra Responsable de Dispositivos',
+          desc: 'Prolongamos la vida útil de los dispositivos y reciclamos electrónicamente con responsabilidad.',
         },
       ],
       gl: [
         {
-          title: 'Redución da pegada de carbono',
-          desc: 'Ao traballar en remoto evitamos emisións derivadas do transporte e do uso de infraestruturas físicas.',
+          title: 'Pegada de Carbono Reducida',
+          desc: 'Ao traballar en remoto evitamos emisións por desprazamentos e infraestruturas físicas.',
         },
         {
-          title: 'Uso eficiente da enerxía',
-          desc: 'Empregamos dispositivos de alta eficiencia enerxética e optimizamos o consumo eléctrico nas nosas operacións.',
+          title: 'Uso Eficiente da Enerxía',
+          desc: 'Empregamos dispositivos eficientes e optimizamos o consumo eléctrico en todas as operacións.',
         },
         {
-          title: 'Modelo sen papel',
-          desc: 'Toda a documentación e procesos de traballo xestiónanse de forma dixital, reducindo o uso innecesario de papel.',
+          title: 'Modelo Sen Papel',
+          desc: 'Toda a documentación e os procesos son dixitais, reducindo o uso innecesario de papel.',
         },
         {
-          title: 'Almacenamento en nube sostible',
-          desc: 'Usamos servizos de almacenamento en nube de provedores que aplican políticas de eficiencia enerxética e uso de enerxías renovables.',
+          title: 'Nube con Provedores Verdes',
+          desc: 'Usamos servizos cloud de provedores con políticas sostibles e enerxías renovables.',
         },
         {
-          title: 'Modelo remoto sostible',
-          desc: 'Apostamos por un modelo empresarial sostible que promove un uso responsable da tecnoloxía e minimiza o impacto ecolóxico.',
+          title: 'Modelo Remoto Sustentable',
+          desc: 'Promovemos un modelo tecnolóxico responsable e cun impacto ambiental mínimo.',
+        },
+        {
+          title: 'Desenvolvemento Web e App Verde',
+          desc: 'Construímos webs e apps lixeiras que reducen o tráfico e o consumo enerxético dos servidores.',
+        },
+        {
+          title: 'Provedores de Hosting Ecolóxicos',
+          desc: 'Usamos centros de datos que empregan enerxía renovable e están optimizados para aforro enerxético.',
+        },
+        {
+          title: 'Reciclaxe e Compra Responsable de Dispositivos',
+          desc: 'Prolongamos a vida útil dos equipos e reciclamos o material electrónico de forma responsable.',
         },
       ],
     },
