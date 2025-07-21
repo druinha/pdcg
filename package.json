@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:pdcg": "node dist/pdcg/server/server.mjs"
+    "build:ssr": "ng build && ng run pdcg:server",
+    "serve:ssr": "node dist/pdcg-server/main.js",
+    "prerender": "ng run pdcg:prerender"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,7 @@
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.8",
     "@emailjs/browser": "^4.4.1",
+    "@nguniversal/express-engine": "^7.0.2",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

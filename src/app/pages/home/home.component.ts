@@ -9,6 +9,7 @@ import { ContactComponent } from '../../components/contact/contact.component';
 import { SolutionsComponent } from '../../components/solutions/solutions.component';
 import { EnviromentalComponent } from '../../components/enviromental/enviromental.component';
 import { WhyUsComponent } from '../../components/why-us/why-us.component';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -27,4 +28,37 @@ import { WhyUsComponent } from '../../components/why-us/why-us.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle(
+      'PDCG - Proxectos, Desenvolvemento e Código da Galiza'
+    );
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'We create web and mobile applications for businesses in Galicia. Tailored digital solutions for your company.',
+      },
+      {
+        name: 'keywords',
+        content:
+          'Web development, App development, Galicia, PDCG, software, mobile, Angular, Ionic',
+      },
+      {
+        property: 'og:title',
+        content: 'PDCG Solutions - Digital Development Experts',
+      },
+      {
+        property: 'og:description',
+        content:
+          'Web and app development agency helping Galician companies grow with tailored software.',
+      },
+      {
+        property: 'og:image',
+        content: 'https://pdcgsolutions.com/assets/og-image.jpg',
+      },
+      { property: 'og:url', content: 'https://pdcgsolutions.com/' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ]);
+  }
+}
