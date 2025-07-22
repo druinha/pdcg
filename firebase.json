@@ -4,6 +4,14 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
+        "source": "/robots.txt",
+        "destination": "/assets/robots.txt"
+      },
+      {
+        "source": "/sitemap.xml",
+        "destination": "/assets/sitemap.xml"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
