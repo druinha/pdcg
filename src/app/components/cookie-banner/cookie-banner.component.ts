@@ -29,6 +29,11 @@ export class CookieBannerComponent implements OnInit {
     if (!consent) {
       this.showBanner = true;
     }
+    else if (consent === 'accepted') {
+      this.showBanner = false;
+    } else if (consent === 'rejected') {
+      this.showBanner = false;
+    }
   }
 }
 

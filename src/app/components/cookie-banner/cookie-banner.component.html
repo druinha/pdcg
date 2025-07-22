@@ -1,12 +1,16 @@
-<div *ngIf="showBanner" class="cookie-content">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-    <p class="text-sm">
+<div *ngIf="showBanner" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-4 rounded-xl shadow-lg z-50 w-[90%] md:w-auto max-w-4xl">
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <p class="text-sm text-center md:text-left">
       We use cookies to improve your experience. By clicking "Accept", you agree to our use of cookies.
-      <a href="/cookies-policy" class="underline text-blue-400 ml-1">Learn more</a>.
+      <a routerLink="/cookies-policy" class="underline text-blue-400 ml-1">Learn more</a>.
     </p>
-    <div class="flex gap-2 mt-2 md:mt-0">
-      <button (click)="acceptCookies()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm">Accept</button>
-      <button (click)="rejectCookies()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-sm">Reject</button>
+    <div class="flex gap-2 justify-center md:justify-end">
+      <button (click)="acceptCookies()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm">
+        Accept
+      </button>
+      <button (click)="rejectCookies()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-sm">
+        Reject
+      </button>
     </div>
   </div>
 </div>
