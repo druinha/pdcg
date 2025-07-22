@@ -20,6 +20,7 @@ export class FooterComponent {
       projects: 'Projects',
       privacyPolicy: 'Privacy Policy',
       allRightsReserved: 'All rights reserved.',
+      cookiesPolicy: 'Cookies Policy',
     },
     es: {
       companyDescription: 'Proyectos, Desarrollo y Código de Galicia',
@@ -29,6 +30,7 @@ export class FooterComponent {
       projects: 'Proyectos',
       privacyPolicy: 'Política de Privacidad',
       allRightsReserved: 'Todos los derechos reservados.',
+      cookiesPolicy: 'Política de Cookies',
     },
     gl: {
       companyDescription: 'Proxectos, Desenvolvemento e Código da Galiza',
@@ -38,6 +40,7 @@ export class FooterComponent {
       projects: 'Proxectos',
       privacyPolicy: 'Política de Privacidade',
       allRightsReserved: 'Todos os dereitos reservados.',
+      cookiesPolicy: 'Política de Cookies',
     },
   };
 

@@ -20,6 +20,13 @@ export const routes: Routes = [
         './components/contact-consulting/contact-consulting.component'
       ).then((m) => m.ContactConsultingComponent),
   },
+    { path: 'cookies-policy', 
+    loadComponent: () =>
+      import('./pages/cookies-policy/cookies-policy.component').then(
+        (m) => m.CookiesPolicyComponent
+      ),
+     },
+
   {
     path: '**',
     redirectTo: '',

@@ -10,6 +10,7 @@ import { SolutionsComponent } from '../../components/solutions/solutions.compone
 import { EnviromentalComponent } from '../../components/enviromental/enviromental.component';
 import { WhyUsComponent } from '../../components/why-us/why-us.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { CookieBannerComponent } from '../../components/cookie-banner/cookie-banner.component';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { Title, Meta } from '@angular/platform-browser';
     SolutionsComponent,
     EnviromentalComponent,
     WhyUsComponent,
+    CookieBannerComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
