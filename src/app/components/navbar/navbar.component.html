@@ -1,60 +1,76 @@
-<nav class="navbar">
-    <div class="container">
+<nav class="bg-gray-900 text-white sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
         <!-- Brand -->
-        <div class="brand cursor-pointer" (click)="navigateToHome()">
-            <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="logo" />
+        <div class="flex items-center cursor-pointer" (click)="navigateToHome()">
+            <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="h-10 w-10 mr-2" />
             <div>
-                <div class="title">PDCG</div>
-                <div class="subtitle">
+                <div class="text-lg font-bold">PDCG</div>
+                <div class="text-xs">
                     {{
-                    lang === 'en' ? 'Proxectos, Desenvolvemento E Código da Galiza' :
-                    (lang === 'es' ? 'Proxectos, Desenvolvemento E Código de Galiza' : 'Proxectos, Desenvolvemento e
-                    Código
-                    da Galiza')
+                    lang === 'en'
+                    ? 'Proxectos, Desenvolvemento E Código da Galiza'
+                    : lang === 'es'
+                    ? 'Proxectos, Desenvolvemento E Código de Galiza'
+                    : 'Proxectos, Desenvolvemento e Código da Galiza'
                     }}
                 </div>
             </div>
         </div>
 
         <!-- Desktop links -->
-        <div class="links desktop">
+        <div class="hidden md:flex space-x-4">
             <ng-container *ngIf="navLabels[lang] as labels">
-                <button *ngFor="let item of labels"
-                    (click)="item === 'Home' || item === 'Inicio' ? navigateToHome() : scrollToSection(getSectionId(item))">
+                <button *ngFor="let item of labels" (click)="
+            item === 'Home' || item === 'Inicio'
+              ? navigateToHome()
+              : scrollToSection(getSectionId(item))
+          " type="button" class="hover:underline focus:outline-none">
                     {{ item }}
                 </button>
             </ng-container>
         </div>
 
         <!-- Language dropdown -->
-        <div class="lang-dropdown">
-            <button class="lang-button" (click)="toggleLangMenu()">🌐 {{ lang.toUpperCase() }}</button>
-            <div *ngIf="showLangMenu" class="lang-menu">
-                <button *ngFor="let l of langs" [disabled]="l === lang" (click)="switchLang(l)">
+        <div class="relative hidden md:block">
+            <button class="lang-button px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 focus:outline-none"
+                (click)="toggleLangMenu()" type="button">
+                🌐 {{ lang.toUpperCase() }}
+            </button>
+            <div *ngIf="showLangMenu" class="absolute right-0 mt-1 bg-gray-800 rounded shadow-lg"
+                style="min-width: 4rem;">
+                <button *ngFor="let l of langs" [disabled]="l === lang" (click)="switchLang(l)" type="button"
+                    class="block w-full px-2 py-1 text-left hover:bg-gray-700 disabled:opacity-50">
                     {{ l.toUpperCase() }}
                 </button>
             </div>
         </div>
 
         <!-- Mobile menu toggle -->
-        <button class="mobile-toggle" (click)="isOpen = !isOpen">
+        <button class="md:hidden text-2xl focus:outline-none" (click)="isOpen = !isOpen" aria-label="Toggle menu"
+            type="button">
             {{ isOpen ? '✖' : '☰' }}
         </button>
     </div>
 
     <!-- Mobile menu content -->
-    <div *ngIf="isOpen" class="mobile-menu">
-        <div class="mb-4 flex flex-col items-center gap-2">
-            <button *ngFor="let l of langs" [class.active]="lang === l" (click)="switchLang(l)">
+    <div *ngIf="isOpen" class="md:hidden bg-gray-800 px-4 pb-4 space-y-4">
+        <div class="flex justify-center space-x-2">
+            <button *ngFor="let l of langs" [class.font-bold]="lang === l" (click)="switchLang(l)" type="button"
+                class="px-3 py-1 rounded hover:bg-gray-700 focus:outline-none">
                 {{ l.toUpperCase() }}
             </button>
         </div>
 
         <ng-container *ngIf="navLabels[lang] as labels">
-            <button *ngFor="let item of labels"
-                (click)="item === 'Home' || item === 'Inicio' ? navigateToHome() : scrollToSection(getSectionId(item))">
-                {{ item }}
-            </button>
+            <div class="flex flex-col space-y-2">
+                <button *ngFor="let item of labels" (click)="
+            item === 'Home' || item === 'Inicio'
+              ? navigateToHome()
+              : scrollToSection(getSectionId(item))
+          " type="button" class="text-left hover:underline focus:outline-none">
+                    {{ item }}
+                </button>
+            </div>
         </ng-container>
     </div>
 </nav>

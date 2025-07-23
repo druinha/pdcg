@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   lang: 'en' | 'es' | 'gl' = 'en';
@@ -76,7 +76,8 @@ export class NavbarComponent {
     private langService: LanguageService,
     private router: Router,
     private location: Location
-  ) {
+  ) 
+  {
     this.langService.lang$.subscribe((l) => {
       this.lang = l;
       this.showLangMenu = false;
@@ -111,7 +112,8 @@ export class NavbarComponent {
     const currentPath = this.location.path();
     if (currentPath === '' || currentPath === '/' || currentPath === '/#home') {
       this.scrollToSection('home');
-    } else {
+    }
+    else {
       this.router.navigate(['/']).then(() => {
         this.scrollToSection('home');
       });
