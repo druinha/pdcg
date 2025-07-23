@@ -88,11 +88,11 @@ loading: 'Sending your message...'
         submitButton: 'Enviar mensaje',
       },
       modal: {
-  title: '¡Mensaje enviado!',
-  message: 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto. Revisa tu carpeta de spam por si acaso.',
-  closeButton: 'Cerrar',
-},
-loading: 'Enviando tu mensaje...'
+      title: '¡Mensaje enviado!',
+      message: 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto. Revisa tu carpeta de spam por si acaso.',
+      closeButton: 'Cerrar',
+    },
+    loading: 'Enviando tu mensaje...'
 
 
     },
