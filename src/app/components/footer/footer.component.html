@@ -27,7 +27,7 @@
             <ul class="text-sm space-y-1">
                 <li><a href="/careers" class="hover:underline">{{ translations[lang].careers }}</a></li>
                 <li><a href="/projects" class="hover:underline">{{ translations[lang].projects }}</a></li>
-                  <li><a href="/cookies-policy" class="hover:underline">{{ translations[lang].cookiesPolicy }}</a></li>
+                <li><a href="/cookies-policy" class="hover:underline">{{ translations[lang].cookiesPolicy }}</a></li>
                 <li><a href="/privacy" class="hover:underline">{{ translations[lang].privacyPolicy }}</a></li>
             </ul>
         </div>
@@ -64,7 +64,14 @@
     </div>
 
     <!-- Bottom -->
+
+
     <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm">
+        <p>
+            {{ translations[lang].footerCookiesText }}
+            <a routerLink="/cookie-settings" class="underline text-blue-400">{{ translations[lang].footerCookiesLink
+                }}</a> {{ translations[lang].footerPage }}.
+        </p>
         &copy; 2025 PDCG. {{ translations[lang].allRightsReserved }}
     </div>
 </footer>
