@@ -33,6 +33,29 @@ export const routes: Routes = [
            (m) => m.PrivacyPolicyComponent
          ),
      },
+     {
+      path: 'about',
+      loadComponent: () =>
+        import('./pages/about/about.component').then((m) => m.AboutComponent),
+    
+     },
+     {
+      path: 'blog',
+      loadComponent: () =>
+        import('./pages/blog/blog.component').then((m) => m.BlogComponent),
+     },
+     {
+      path: 'sitemap',
+      loadComponent: () =>
+        import('./pages/sitemap/sitemap.component').then((m) => m.SitemapComponent),
+     },
+     {
+      path: 'terms-contidions',
+      loadComponent: () =>
+        import('./pages/terms-conditions/terms-conditions.component').then(
+          (m) => m.TermsConditionsComponent
+        ),
+     },
 
   {
     path: '**',
