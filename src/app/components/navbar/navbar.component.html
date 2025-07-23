@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container">
         <!-- Brand -->
-        <div class="brand">
+        <div class="brand cursor-pointer" (click)="navigateToHome()">
             <img src="../../../assets/images/logo.svg" alt="PDCG Logo" class="logo" />
             <div>
                 <div class="title">PDCG</div>
@@ -19,7 +19,8 @@
         <!-- Desktop links -->
         <div class="links desktop">
             <ng-container *ngIf="navLabels[lang] as labels">
-                <button *ngFor="let item of labels" (click)="scrollToSection(getSectionId(item))">
+                <button *ngFor="let item of labels"
+                    (click)="item === 'Home' || item === 'Inicio' ? navigateToHome() : scrollToSection(getSectionId(item))">
                     {{ item }}
                 </button>
             </ng-container>
@@ -50,7 +51,8 @@
         </div>
 
         <ng-container *ngIf="navLabels[lang] as labels">
-            <button *ngFor="let item of labels" (click)="scrollToSection(getSectionId(item))">
+            <button *ngFor="let item of labels"
+                (click)="item === 'Home' || item === 'Inicio' ? navigateToHome() : scrollToSection(getSectionId(item))">
                 {{ item }}
             </button>
         </ng-container>
