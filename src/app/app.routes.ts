@@ -26,6 +26,13 @@ export const routes: Routes = [
         (m) => m.CookiesPolicyComponent
       ),
      },
+     {
+       path: 'privacy-policy',
+       loadComponent: () =>
+         import('./pages/privacy-policy/privacy-policy.component').then(
+           (m) => m.PrivacyPolicyComponent
+         ),
+     },
 
   {
     path: '**',

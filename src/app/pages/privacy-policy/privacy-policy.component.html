@@ -1,0 +1,29 @@
+<div class="max-w-4xl mx-auto px-5 mt-28 text-white">
+    <h1 class="text-3xl font-bold mb-4">{{ translations[lang].title }}</h1>
+    <p class="text-sm text-gray-300 mb-6"><strong>{{ translations[lang].updated }}</strong></p>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].introTitle }}</h2>
+    <p>{{ translations[lang].introText }}</p>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].infoTitle }}</h2>
+    <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let item of translations[lang].infoList">{{ item }}</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].useTitle }}</h2>
+    <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let item of translations[lang].useList">{{ item }}</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].shareTitle }}</h2>
+    <p>{{ translations[lang].shareText }}</p>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].rightsTitle }}</h2>
+    <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let item of translations[lang].rightsList">{{ item }}</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">{{ translations[lang].contactTitle }}</h2>
+    <p>{{ translations[lang].contactText }}</p>
+    <p><a href="mailto:info@pdcgsolutions.com" class="text-blue-500">info&#64;pdcgsolutions.com</a></p>
+</div>
