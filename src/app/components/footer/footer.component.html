@@ -69,7 +69,8 @@
     <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm">
         <p>
             {{ translations[lang].footerCookiesText }}
-            <a routerLink="/cookie-settings" class="underline text-blue-400">{{ translations[lang].footerCookiesLink
+            <a (click)="OpenCookies()" class="underline text-blue-400 cursor-pointer">{{
+                translations[lang].footerCookiesLink
                 }}</a> {{ translations[lang].footerPage }}.
         </p>
         &copy; 2025 PDCG. {{ translations[lang].allRightsReserved }}

@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { CookiesServiceService } from '../../services/cookies-service.service';
 
 @Component({
   selector: 'app-cookie-banner',
@@ -38,43 +39,38 @@ export class CookieBannerComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private langService: LanguageService,
-  ) {
-    // Check if the platform is browser
-    this.isBrowser = isPlatformBrowser(this.platformId);
+    private cookieConsentService: CookiesServiceService
+  ) 
+  {
+    this.isBrowser = isPlatformBrowser(this.platformId); // ✅ set this first!
+
+  if (this.isBrowser) {
+    this.cookieConsentService.consent$.subscribe(consent => {
+      this.showBanner = consent === null;
+    });
+  }
      this.langService.lang$.subscribe((l) => {
       this.lang = l;
     });
   }
 
   ngOnInit(): void {
-  this.isBrowser = isPlatformBrowser(this.platformId);
 
   if (this.isBrowser) {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      this.showBanner = true;
-    }
-    else if (consent === 'accepted') {
-      this.showBanner = false;
-    } else if (consent === 'rejected') {
-      this.showBanner = false;
-    }
+    const consent = this.cookieConsentService.getConsent();
+    this.showBanner = consent === null;
   }
 }
 
 
-  acceptCookies(): void {
-  if (this.isBrowser) {
-    localStorage.setItem('cookie-consent', 'accepted');
-    this.showBanner = false;
-  }
+acceptCookies() {
+  this.cookieConsentService.setConsent('accepted');
+  this.showBanner = false;
 }
 
-rejectCookies(): void {
-  if (this.isBrowser) {
-    localStorage.setItem('cookie-consent', 'rejected');
-    this.showBanner = false;
-  }
+rejectCookies() {
+  this.cookieConsentService.setConsent('rejected');
+  this.showBanner = false;
 }
 
 }

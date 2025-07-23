@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
+import { CookiesServiceService } from '../../services/cookies-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FooterComponent {
   lang: 'en' | 'es' | 'gl' = 'en';
+  showBanner = false;
 
   translations = {
     en: {
@@ -53,9 +55,17 @@ export class FooterComponent {
     },
   };
 
-  constructor(private langService: LanguageService) {
+  constructor(
+    private langService: LanguageService,
+    private cookieConsentService: CookiesServiceService
+  ) 
+  {
     this.langService.lang$.subscribe((l) => {
       this.lang = l;
     });
   }
+
+OpenCookies() {
+  this.cookieConsentService.showBanner(); // ✅ triggers the banner to show again
+}
 }
