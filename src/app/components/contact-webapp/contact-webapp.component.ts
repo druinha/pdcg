@@ -162,6 +162,7 @@ loading: 'Enviando a túa mensaxe...'
             budget: formData.budget || 'Not specified',
             timeline: formData.timeline || 'Not specified',
             message: formData.message,
+             lang: this.lang,
           },
           'U5iw7AFZNS4j7Q1dD' // ✅ Replace with your EmailJS User ID (Public Key)
         )

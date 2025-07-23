@@ -124,6 +124,7 @@ export class ContactConsultingComponent {
           type: formData.type,
           company: formData.company || 'Not specified',
           message: formData.message,
+           lang: this.lang,
         },
         'U5iw7AFZNS4j7Q1dD' // ✅ Your EmailJS public key
       )
