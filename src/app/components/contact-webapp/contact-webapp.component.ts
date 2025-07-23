@@ -27,9 +27,13 @@ interface DevFormData {
   styleUrl: './contact-webapp.component.scss',
 })
 export class ContactWebappComponent {
+
   lang: 'en' | 'es' | 'gl' = 'en';
 
+  showSuccessModal = false;
+
   devForm: FormGroup;
+  isLoading = false;
 
   translations = {
     en: {
@@ -53,6 +57,13 @@ export class ContactWebappComponent {
         messagePlaceholder: 'Describe your project goals and needs',
         submitButton: 'Send Message',
       },
+      modal: {
+  title: 'Message Sent!',
+  message: 'Thank you for your message. We will contact you shortly. Please check your spam folder just in case.',
+  closeButton: 'Close',
+},
+loading: 'Sending your message...'
+
     },
     es: {
       contactForm: {
@@ -76,6 +87,14 @@ export class ContactWebappComponent {
           'Describe los objetivos y necesidades de tu proyecto',
         submitButton: 'Enviar mensaje',
       },
+      modal: {
+  title: '¡Mensaje enviado!',
+  message: 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto. Revisa tu carpeta de spam por si acaso.',
+  closeButton: 'Cerrar',
+},
+loading: 'Enviando tu mensaje...'
+
+
     },
     gl: {
       contactForm: {
@@ -99,7 +118,15 @@ export class ContactWebappComponent {
           'Describe os obxectivos e necesidades do teu proxecto',
         submitButton: 'Enviar mensaxe',
       },
+      modal: {
+  title: '¡Mensaje enviado!',
+  message: 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto. Revisa tu carpeta de spam por si acaso.',
+  closeButton: 'Cerrar',
+},
+loading: 'Enviando a túa mensaxe...'
+
     },
+
   };
 
   constructor(private fb: FormBuilder, private langService: LanguageService) {
@@ -119,6 +146,7 @@ export class ContactWebappComponent {
 
   onSubmit() {
     if (this.devForm.valid) {
+        this.isLoading = true;
       const formData = this.devForm.value as DevFormData;
 
       emailjs
@@ -138,7 +166,8 @@ export class ContactWebappComponent {
           'U5iw7AFZNS4j7Q1dD' // ✅ Replace with your EmailJS User ID (Public Key)
         )
         .then(() => {
-          alert('Your message has been sent! We will contact you shortly.');
+          this.isLoading = false;
+          this.showSuccessModal = true;
           this.devForm.reset(); // ✅ Clear form after successful send
         })
         .catch((error) => {
@@ -147,4 +176,8 @@ export class ContactWebappComponent {
         });
     }
   }
+
+  closeModal() {
+  this.showSuccessModal = false;
+}
 }
