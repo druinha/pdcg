@@ -152,10 +152,11 @@ loading: 'Enviando a túa mensaxe...'
       emailjs
         .send(
           'service_0hwujn8', // ✅ Replace with your actual Service ID
-          'template_773tnit', // ✅ Replace with your actual Template ID
+          'template_v6bmbhw', // ✅ Replace with your actual Template ID
           {
             name: formData.name,
             email: formData.email,
+            reply_to: formData.email, // ✅ Add reply-to field
             type: this.translations[this.lang].contactForm.projectTypeOptions[
               formData.type
             ],

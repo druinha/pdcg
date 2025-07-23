@@ -117,10 +117,11 @@ export class ContactConsultingComponent {
     emailjs
       .send(
         'service_0hwujn8', // ✅ Replace with your actual EmailJS service ID
-        'template_773tnit', // ✅ Use a dedicated template for consulting, if needed
+        'template_v6bmbhw', // ✅ Use a dedicated template for consulting, if needed
         {
           name: formData.name,
           email: formData.email,
+          reply_to: formData.email,
           type: formData.type,
           company: formData.company || 'Not specified',
           message: formData.message,
