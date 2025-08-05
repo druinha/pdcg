@@ -11,6 +11,7 @@ import { EnviromentalComponent } from '../../components/enviromental/enviromenta
 import { WhyUsComponent } from '../../components/why-us/why-us.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { CookieBannerComponent } from '../../components/cookie-banner/cookie-banner.component';
+import { SubventionsComponent } from '../../components/subventions/subventions.component';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,8 @@ import { CookieBannerComponent } from '../../components/cookie-banner/cookie-ban
     SolutionsComponent,
     EnviromentalComponent,
     WhyUsComponent,
-    CookieBannerComponent
+    CookieBannerComponent,
+    SubventionsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
